@@ -31,6 +31,10 @@ import java.io.StringWriter;
 /**
  * An implementation of {@link org.whispersystems.jobqueue.persistence.JobSerializer} that uses
  * Java Serialization.
+ *
+ * <b>NOTE</b>: This class does not encrypt/decrypt jobs even if the {@code Job} has {@code EncryptionKeys}.
+ * This means that the {@code keys} and {@code encrypted} parameters are ignored by this implementation of
+ * {@link org.whispersystems.jobqueue.persistence.JobSerializer}.
  */
 public class JavaJobSerializer implements JobSerializer {
 
